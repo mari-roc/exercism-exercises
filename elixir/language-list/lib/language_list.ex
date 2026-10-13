@@ -21,7 +21,6 @@ defmodule LanguageList do
   end
 
   def functional_list?(list) do
-    linguagens_funcionais = ["Elixir", "Clojure", "Haskell", "Lisp", "Scala", "F#", "OCaml", "Erlang", "Scheme", "Racket"]
-    is_list(list) and Enum.all?(list, fn linguagem -> linguagem in linguagens_funcionais end)
+    "Elixir" in list or "Clojure" in list
   end
 end
