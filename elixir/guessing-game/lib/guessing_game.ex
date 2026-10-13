@@ -1,6 +1,5 @@
 defmodule GuessingGame do
-  def compare(_secret_number, guess) when guess == :no_guess or guess == :nil, do: "Make a guess"
-  def compare(secret_number), do: "Make a guess"
+  def compare(_secret_number, guess \\ :no_guess) when guess == :no_guess or guess == nil, do: "Make a guess"
   def compare(secret_number, secret_number), do: "Correct"
   def compare(secret_number, guess) when guess == secret_number + 1 or guess == secret_number - 1, do: "So close"
   def compare(secret_number, guess) when guess > secret_number, do: "Too high"
