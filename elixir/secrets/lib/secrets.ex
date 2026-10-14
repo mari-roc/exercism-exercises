@@ -24,14 +24,14 @@ defmodule Secrets do
   end
 
   def secret_and(secret) do
-    use Bitwise
+    import Bitwise
     fn param ->
       band(param, secret)
     end
   end
 
   def secret_xor(secret) do
-    use Bitwise
+    import Bitwise
     fn param ->
       bxor(param, secret)
     end
